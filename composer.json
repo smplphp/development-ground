@@ -1,0 +1,31 @@
+{
+  "name"        : "smplphp/development-ground",
+  "description" : "Development ground for the SMPL framework",
+  "homepage"    : "https://smplphp.dev",
+  "type"        : "library",
+  "license"     : "MIT",
+  "authors"     : [
+    {
+      "name" : "Ollie",
+      "email": "code@ollie.codes"
+    }
+  ],
+  "require"     : {
+    "php": "^8.3"
+  },
+  "require-dev" : {
+    "phpunit/phpunit": "^10.5",
+    "phpstan/phpstan": "^1.10",
+    "vimeo/psalm": "^5.18"
+  },
+  "autoload"    : {
+    "psr-4": {
+      "Smpl\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Smpl\\Tests\\": "tests/"
+    }
+  }
+}
