@@ -4,7 +4,8 @@ declare(strict_types=1);
 namespace Smpl\Functional\Support;
 
 use Smpl\Functional\Contracts\Func;
-use Smpl\Functional\Functions\ComposedFunc;
+use Smpl\Functional\Functions;
+use Smpl\Functional\Predicates;
 
 /**
  * Base Function
@@ -42,6 +43,18 @@ abstract class BaseFunc implements Func
      */
     public function compose(Func $before): Func
     {
-        return new ComposedFunc($before, $this);
+        return Functions::compose($before, $this);
+    }
+
+    /**
+     * @template T of mixed
+     *
+     * @param \Smpl\Functional\Contracts\Func<R, T> $after
+     *
+     * @return \Smpl\Functional\Contracts\Func<P, T>
+     */
+    public function andThen(Func $after): Func
+    {
+        return Functions::compose($this, $after);
     }
 }
