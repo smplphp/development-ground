@@ -24,10 +24,17 @@ interface Comparator
      * Compare two values to determine their comparative difference
      *
      * Takes two arguments, A and B, and compares them to determine whether A is less than,
-     * equal to, or greater than B, returning a value that is less than 0, 0, or greater than
-     * 0, respectively.
+     * equal to, or greater than B, returning a value that is negative, zero, or positive,
+     * respectively.
      *
      * This method is an implementation of the mathematical sign, or signum function.
+     *
+     * Implementations must ensure flipping the arguments also flips the result. If A compared
+     * to B is -10, then B compared to A would be 10.
+     *
+     * Implementations must also ensure that the relation is transitive, so if A is greater than
+     * B, and B is greater than C, A is also greater than C. Likewise, if A is equal to B, and A
+     * compared to C is 3, then B compared to C must also be 3.
      *
      * @param P1 $a
      * @param P2 $b
@@ -43,7 +50,7 @@ interface Comparator
      * than B, returning a boolean.
      *
      * This method is designed as a helper, and it is recommended that any implementation
-     * simply check {@see self::compare()} for the return value being less than 0.
+     * simply check {@see self::compare()} for the return value being negative.
      *
      * @param P1 $a
      * @param P2 $b
@@ -59,7 +66,7 @@ interface Comparator
      * than B, returning a boolean.
      *
      * This method is designed as a helper, and it is recommended that any implementation
-     * simply check {@see self::compare()} for the return value being greater than 0.
+     * simply check {@see self::compare()} for the return value being positive.
      *
      * @param P1 $a
      * @param P2 $b
@@ -75,7 +82,7 @@ interface Comparator
      * to B, returning a boolean.
      *
      * This method is designed as a helper, and it is recommended that any implementation
-     * simply check {@see self::compare()} for the return value being 0.
+     * simply check {@see self::compare()} for the return value being zero.
      *
      * @param P1 $a
      * @param P2 $b
