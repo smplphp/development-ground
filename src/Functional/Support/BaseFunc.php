@@ -7,7 +7,7 @@ use Smpl\Functional\Contracts\Func;
 use Smpl\Functional\Functions\ComposedFunc;
 
 /**
- * Base Func
+ * Base Function
  *
  * This is a base class that can be used by all {@see \Smpl\Functional\Contracts\Func}
  * implementations to provide the base functionality, such as the magic __invoke method.
