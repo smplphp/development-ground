@@ -28,6 +28,10 @@ final class Functions
      */
     public static function callable(callable $callable): Func
     {
+        if ($callable instanceof Func) {
+            return $callable;
+        }
+
         return new CallableFunc($callable);
     }
 

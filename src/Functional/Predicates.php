@@ -35,6 +35,10 @@ final class Predicates
      */
     public static function callable(callable $callable): Predicate
     {
+        if ($callable instanceof Predicate) {
+            return $callable;
+        }
+        
         return new CallablePredicate($callable);
     }
 
