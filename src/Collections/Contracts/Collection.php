@@ -216,8 +216,8 @@ interface Collection extends Enumerable
      *
      * The behaviour without a comparator is an implementation-specific detail.
      *
-     * @param iterable                                   $elements
-     * @param \Smpl\Functional\Contracts\Comparator|null $comparator
+     * @param iterable<V>                                      $elements
+     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
      *
      * @return bool
      */
