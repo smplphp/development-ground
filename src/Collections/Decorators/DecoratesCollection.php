@@ -23,6 +23,8 @@ use Traversable;
 trait DecoratesCollection
 {
     /**
+     * Get the collection this class is decorating
+     *
      * @return \Smpl\Collections\Contracts\Collection<P>
      */
     abstract protected function getCollection(): Collection;

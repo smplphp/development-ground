@@ -74,6 +74,14 @@ abstract class BaseCollection implements Collection
     }
 
     /**
+     * Add an element to this collection
+     *
+     * Takes an argument of type V and adds it to this collection, returning true
+     * if it was successful, and false otherwise.
+     *
+     * Elements are added to the end of the collection, and there are no constraints
+     * on what can and cannot be added to the collection.
+     *
      * @param P $element
      *
      * @return bool
