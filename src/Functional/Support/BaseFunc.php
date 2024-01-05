@@ -5,7 +5,6 @@ namespace Smpl\Functional\Support;
 
 use Smpl\Functional\Contracts\Func;
 use Smpl\Functional\Functions;
-use Smpl\Functional\Predicates;
 
 /**
  * Base Function

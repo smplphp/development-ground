@@ -38,7 +38,7 @@ final class Predicates
         if ($callable instanceof Predicate) {
             return $callable;
         }
-        
+
         return new CallablePredicate($callable);
     }
 
