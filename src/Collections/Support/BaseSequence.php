@@ -49,6 +49,9 @@ abstract class BaseSequence extends BaseCollection implements Contracts\Sequence
      * @return void
      *
      * @throws \Smpl\Collections\Exceptions\IndexOutOfRangeException If the provided index is outside the calculated range
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     protected function checkIndexRange(int $index, bool $inclusive = true, bool $allowNegative = false): void
     {
@@ -84,6 +87,9 @@ abstract class BaseSequence extends BaseCollection implements Contracts\Sequence
      * @param int $index
      *
      * @return P|null
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     public function get(int $index): mixed
@@ -243,6 +249,9 @@ abstract class BaseSequence extends BaseCollection implements Contracts\Sequence
      * @param array<P> $elements
      *
      * @return static
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     abstract protected function create(array $elements): static;
 
@@ -261,6 +270,9 @@ abstract class BaseSequence extends BaseCollection implements Contracts\Sequence
      * @param int $count
      *
      * @return static
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     public function slice(int $index, int $count): static

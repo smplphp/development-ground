@@ -26,9 +26,25 @@ use Smpl\Functional\Contracts\Comparator;
 final class Sequence extends BaseSequence
 {
     /**
+     * @param iterable<P> $elements
+     *
+     * @noinspection SenselessProxyMethodInspection
+     * */
+    public function __construct(iterable $elements = [])
+    {
+        // This constructor is here because PHPStan complains if it isn't, and is able to
+        // follow the P template hierarchy.
+        parent::__construct($elements);
+    }
+
+
+    /**
      * @param array<P> $elements
      *
      * @return static
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     protected function create(array $elements): static
@@ -47,9 +63,28 @@ final class Sequence extends BaseSequence
      * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
      *
      * @return \Smpl\Collections\Contracts\Set<P>
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     public function unique(?Comparator $comparator = null): Contracts\Set
     {
         return new Set($this->elements, $comparator);
+    }
+
+    /**
+     * Get an immutable version of this collection
+     *
+     * Returns a new collection instance containing all the elements this collection does,
+     * but the resulting collection is immutable, and cannot be modified in any way.
+     *
+     * @return \Smpl\Collections\Contracts\Sequence<P>
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
+     */
+    public function immutable(): Contracts\Sequence
+    {
+        return new ImmutableSequence($this->elements);
     }
 }

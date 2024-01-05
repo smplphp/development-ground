@@ -40,6 +40,9 @@ final class Set extends BaseSequence implements Contracts\Set
      * @param array<P> $elements
      *
      * @return static
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     protected function create(array $elements): static
@@ -56,6 +59,9 @@ final class Set extends BaseSequence implements Contracts\Set
      * @param P $element
      *
      * @return bool
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     protected function isNotUnique(mixed $element): bool
     {

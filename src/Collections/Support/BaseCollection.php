@@ -139,6 +139,9 @@ abstract class BaseCollection implements Collection
      * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
      *
      * @return false|int
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     protected function findIndexOf(mixed $element, ?Comparator $comparator = null): false|int
     {
@@ -159,6 +162,9 @@ abstract class BaseCollection implements Collection
      * @param \Smpl\Functional\Contracts\Comparator<P, P> $comparator
      *
      * @return false|int
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     protected function findIndexOfWithComparator(mixed $element, Comparator $comparator): false|int
     {
@@ -176,6 +182,9 @@ abstract class BaseCollection implements Collection
      * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     public function contains(mixed $element, ?Comparator $comparator = null): bool
@@ -192,6 +201,9 @@ abstract class BaseCollection implements Collection
      * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     public function containsAll(iterable $elements, ?Comparator $comparator = null): bool
@@ -211,6 +223,9 @@ abstract class BaseCollection implements Collection
 
     /**
      * @return static
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     public function copy(): static
@@ -220,6 +235,9 @@ abstract class BaseCollection implements Collection
 
     /**
      * @return bool
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     public function isEmpty(): bool
@@ -229,6 +247,9 @@ abstract class BaseCollection implements Collection
 
     /**
      * @return bool
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     public function isNotEmpty(): bool
@@ -326,6 +347,9 @@ abstract class BaseCollection implements Collection
      * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
+     *
+     * @phpstan-pure
+     * @psalm-pure
      */
     protected function areElementsEqual(mixed $element1, mixed $element2, ?Comparator $comparator = null): bool
     {
@@ -370,6 +394,9 @@ abstract class BaseCollection implements Collection
 
     /**
      * @return \Traversable<int, P>
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     public function getIterator(): Traversable
@@ -380,6 +407,9 @@ abstract class BaseCollection implements Collection
 
     /**
      * @return int<0, max>
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     public function count(): int
@@ -389,6 +419,9 @@ abstract class BaseCollection implements Collection
 
     /**
      * @return array<int, P>
+     *
+     * @phpstan-pure
+     * @psalm-mutation-free
      */
     #[Override]
     public function toArray(): array
