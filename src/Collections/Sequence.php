@@ -33,7 +33,7 @@ final class Sequence extends BaseSequence
     #[Override]
     protected function create(array $elements): static
     {
-        return new self($elements);
+        return new static($elements);
     }
 
     /**
