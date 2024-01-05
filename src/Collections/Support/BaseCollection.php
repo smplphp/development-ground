@@ -5,6 +5,7 @@ namespace Smpl\Collections\Support;
 
 use ArrayIterator;
 use Override;
+use Smpl\Collections\Concerns\IsCountable;
 use Smpl\Collections\Contracts\Collection;
 use Smpl\Functional\Contracts\Comparator;
 use Smpl\Functional\Contracts\Predicate;
@@ -22,19 +23,14 @@ use Traversable;
  */
 abstract class BaseCollection implements Collection
 {
+    use IsCountable;
+
     /**
      * The elements in the collection
      *
      * @var array<int, P>
      */
     protected array $elements = [];
-
-    /**
-     * The number of elements in the collection
-     *
-     * @var int<0, max>
-     */
-    protected int $count = 0;
 
     /**
      * @param iterable<P> $elements
@@ -44,33 +40,6 @@ abstract class BaseCollection implements Collection
         if (! empty($elements)) {
             $this->addAll($elements);
         }
-    }
-
-    /**
-     * Modify the current element count
-     *
-     * @param int $count
-     *
-     * @return void
-     */
-    protected function modifyCount(int $count = 1): void
-    {
-        $this->setCount($this->count + $count);
-    }
-
-    /**
-     * Set the current element count
-     *
-     * Takes an integer that will be clamped to be a minimum of 0, before
-     * being set as the current element count.
-     *
-     * @param int $count
-     *
-     * @return void
-     */
-    protected function setCount(int $count): void
-    {
-        $this->count = max(0, $count);
     }
 
     /**
@@ -403,18 +372,6 @@ abstract class BaseCollection implements Collection
     {
         // TODO: Replace this with a better iterator
         return new ArrayIterator($this->elements);
-    }
-
-    /**
-     * @return int<0, max>
-     *
-     * @phpstan-pure
-     * @psalm-mutation-free
-     */
-    #[Override]
-    public function count(): int
-    {
-        return $this->count;
     }
 
     /**
