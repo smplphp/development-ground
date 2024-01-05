@@ -16,6 +16,8 @@ use Smpl\Functional\Support\BaseComparator;
  * @template P2 of mixed
  *
  * @extends \Smpl\Functional\Support\BaseComparator<P1, P2>
+ *
+ * @psalm-immutable
  */
 final class SpaceshipComparator extends BaseComparator
 {

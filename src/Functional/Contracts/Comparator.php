@@ -17,6 +17,9 @@ namespace Smpl\Functional\Contracts;
  *
  * @template P1 of mixed
  * @template P2 of mixed
+ *
+ * @phpstan-pure
+ * @psalm-pure
  */
 interface Comparator
 {
@@ -40,6 +43,8 @@ interface Comparator
      * @param P2 $b
      *
      * @return int
+     *
+     * @psalm-mutation-free
      */
     public function compare(mixed $a, mixed $b): int;
 
@@ -56,6 +61,8 @@ interface Comparator
      * @param P2 $b
      *
      * @return bool
+     *
+     * @psalm-mutation-free
      */
     public function isLessThan(mixed $a, mixed $b): bool;
 
@@ -72,6 +79,8 @@ interface Comparator
      * @param P2 $b
      *
      * @return bool
+     *
+     * @psalm-mutation-free
      */
     public function isGreaterThan(mixed $a, mixed $b): bool;
 
@@ -88,6 +97,8 @@ interface Comparator
      * @param P2 $b
      *
      * @return bool
+     *
+     * @psalm-mutation-free
      */
     public function isEqualTo(mixed $a, mixed $b): bool;
 }

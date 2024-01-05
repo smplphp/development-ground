@@ -16,6 +16,8 @@ use Smpl\Functional\Contracts\Comparator;
  * @template P2 of mixed
  *
  * @implements \Smpl\Functional\Contracts\Comparator<P1, P2>
+ *
+ * @psalm-immutable
  */
 abstract class BaseComparator implements Comparator
 {
