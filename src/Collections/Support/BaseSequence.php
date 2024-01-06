@@ -7,7 +7,7 @@ namespace Smpl\Collections\Support;
 use Override;
 use Smpl\Collections\Contracts;
 use Smpl\Collections\Exceptions\IndexOutOfRangeException;
-use Smpl\Functional\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Comparator;
 
 /**
  * Base Sequence
@@ -100,8 +100,8 @@ abstract class BaseSequence extends BaseCollection implements Contracts\Sequence
     }
 
     /**
-     * @param P                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param P                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return int|false
      */
@@ -225,7 +225,7 @@ abstract class BaseSequence extends BaseCollection implements Contracts\Sequence
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Comparator<P, P> $comparator
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P> $comparator
      *
      * @return static
      */

@@ -2,8 +2,8 @@
 
 namespace Smpl\Collections\Contracts;
 
-use Smpl\Functional\Contracts\Comparator;
-use Smpl\Functional\Contracts\Predicate;
+use Smpl\Utilities\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Predicate;
 
 /**
  * Collection Contract
@@ -99,8 +99,8 @@ interface Collection extends Enumerable
      *
      * The behaviour without a comparator is an implementation-specific detail.
      *
-     * @param V                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
+     * @param V                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V>|null $comparator
      *
      * @return bool
      */
@@ -123,8 +123,8 @@ interface Collection extends Enumerable
      *
      * The behaviour without a comparator is an implementation-specific detail.
      *
-     * @param iterable<V>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
+     * @param iterable<V>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V>|null $comparator
      *
      * @return bool
      */
@@ -191,8 +191,8 @@ interface Collection extends Enumerable
      *
      * The behaviour without a comparator is an implementation-specific detail.
      *
-     * @param V                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
+     * @param V                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V>|null $comparator
      *
      * @return bool
      */
@@ -216,8 +216,8 @@ interface Collection extends Enumerable
      *
      * The behaviour without a comparator is an implementation-specific detail.
      *
-     * @param iterable<V>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
+     * @param iterable<V>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V>|null $comparator
      *
      * @return bool
      */
@@ -233,7 +233,7 @@ interface Collection extends Enumerable
      * Implementations of this method should be consistent with {@see self::removeAll()} as if
      * it was called with a collection of the same elements that satisfy the provided predicate.
      *
-     * @param \Smpl\Functional\Contracts\Predicate<V> $predicate
+     * @param \Smpl\Utilities\Contracts\Predicate<V> $predicate
      *
      * @return bool
      */
@@ -257,8 +257,8 @@ interface Collection extends Enumerable
      * Implementations of this method should be consistent with all methods that accept
      * a combination of element and comparator given the same combination.
      *
-     * @param iterable<V>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
+     * @param iterable<V>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V>|null $comparator
      *
      * @return bool
      */
@@ -277,7 +277,7 @@ interface Collection extends Enumerable
      * Implementations of this method should also be consistent with {@see self::removeIf()},
      * representing the inverse operation.
      *
-     * @param \Smpl\Functional\Contracts\Predicate<V> $predicate
+     * @param \Smpl\Utilities\Contracts\Predicate<V> $predicate
      *
      * @return bool
      */

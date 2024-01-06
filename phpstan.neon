@@ -6,4 +6,3 @@ parameters:
   paths:
     - src
   ignoreErrors:
-    - '#^Method Smpl\\Collections\\Sequence\:\:create\(\) should return Smpl\\Collections\\Sequence\<P\> but returns Smpl\\Collections\\Sequence\<mixed\>\.$#'

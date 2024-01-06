@@ -7,8 +7,8 @@ namespace Smpl\Collections;
 use Override;
 use Smpl\Collections\Exceptions\UnsupportedOperationException;
 use Smpl\Collections\Support\BaseSequence;
-use Smpl\Functional\Contracts\Comparator;
-use Smpl\Functional\Contracts\Predicate;
+use Smpl\Utilities\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Predicate;
 
 /**
  * Immutable Set
@@ -27,13 +27,13 @@ use Smpl\Functional\Contracts\Predicate;
 final class ImmutableSet extends BaseSequence implements Contracts\Set
 {
     /**
-     * @var \Smpl\Functional\Contracts\Comparator<P, P>|null
+     * @var \Smpl\Utilities\Contracts\Comparator<P, P>|null
      */
     private ?Comparator $uniqueConstraint;
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $uniqueConstraint
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $uniqueConstraint
      *
      * @noinspection MagicMethodsValidityInspection
      * @noinspection PhpMissingParentConstructorInspection
@@ -118,8 +118,8 @@ final class ImmutableSet extends BaseSequence implements Contracts\Set
     }
 
     /**
-     * @param P                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param P                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -130,8 +130,8 @@ final class ImmutableSet extends BaseSequence implements Contracts\Set
     }
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -142,7 +142,7 @@ final class ImmutableSet extends BaseSequence implements Contracts\Set
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Predicate<P> $predicate
+     * @param \Smpl\Utilities\Contracts\Predicate<P> $predicate
      *
      * @return bool
      */
@@ -153,8 +153,8 @@ final class ImmutableSet extends BaseSequence implements Contracts\Set
     }
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -165,7 +165,7 @@ final class ImmutableSet extends BaseSequence implements Contracts\Set
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Predicate<P> $predicate
+     * @param \Smpl\Utilities\Contracts\Predicate<P> $predicate
      *
      * @return bool
      */
@@ -223,7 +223,7 @@ final class ImmutableSet extends BaseSequence implements Contracts\Set
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Comparator<P, P> $comparator
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P> $comparator
      *
      * @return never
      */

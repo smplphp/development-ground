@@ -6,7 +6,7 @@ namespace Smpl\Collections;
 
 use Override;
 use Smpl\Collections\Support\BaseSequence;
-use Smpl\Functional\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Comparator;
 
 /**
  * Set
@@ -19,13 +19,13 @@ use Smpl\Functional\Contracts\Comparator;
 final class Set extends BaseSequence implements Contracts\Set
 {
     /**
-     * @var \Smpl\Functional\Contracts\Comparator<P, P>|null
+     * @var \Smpl\Utilities\Contracts\Comparator<P, P>|null
      */
     private ?Comparator $uniqueConstraint;
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $uniqueConstraint
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $uniqueConstraint
      */
     public function __construct(iterable $elements = [], ?Comparator $uniqueConstraint = null)
     {

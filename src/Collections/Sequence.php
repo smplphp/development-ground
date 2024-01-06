@@ -6,7 +6,7 @@ namespace Smpl\Collections;
 
 use Override;
 use Smpl\Collections\Support\BaseSequence;
-use Smpl\Functional\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Comparator;
 
 /**
  * Sequence
@@ -60,7 +60,7 @@ final class Sequence extends BaseSequence
      * {@see \Smpl\Collections\Set} that contains only one instance of each unique
      * element.
      *
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return \Smpl\Collections\Contracts\Set<P>
      *

@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace Smpl\Collections\Decorators;
 
 use Smpl\Collections\Contracts\Collection;
-use Smpl\Functional\Contracts\Comparator;
-use Smpl\Functional\Contracts\Predicate;
+use Smpl\Utilities\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Predicate;
 use Traversable;
 
 /**
@@ -60,8 +60,8 @@ trait DecoratesCollection
     }
 
     /**
-     * @param P                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param P                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -71,8 +71,8 @@ trait DecoratesCollection
     }
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -106,8 +106,8 @@ trait DecoratesCollection
     }
 
     /**
-     * @param P                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param P                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -117,8 +117,8 @@ trait DecoratesCollection
     }
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -128,7 +128,7 @@ trait DecoratesCollection
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Predicate<P> $predicate
+     * @param \Smpl\Utilities\Contracts\Predicate<P> $predicate
      *
      * @return bool
      */
@@ -138,8 +138,8 @@ trait DecoratesCollection
     }
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -149,7 +149,7 @@ trait DecoratesCollection
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Predicate<P> $predicate
+     * @param \Smpl\Utilities\Contracts\Predicate<P> $predicate
      *
      * @return bool
      */

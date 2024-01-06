@@ -13,8 +13,8 @@ use Smpl\Collections\Contracts\Set as SetContract;
 use Smpl\Collections\Iterators\KeyValuePairIterator;
 use Smpl\Collections\Sequence;
 use Smpl\Collections\Set;
-use Smpl\Functional\Contracts\Comparator;
-use Smpl\Functional\Contracts\Predicate;
+use Smpl\Utilities\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Predicate;
 use Traversable;
 
 /**
@@ -54,8 +54,8 @@ class BaseMap implements Map
     }
 
     /**
-     * @param V                                                $value
-     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
+     * @param V                                               $value
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V>|null $comparator
      *
      * @return bool
      */
@@ -76,8 +76,8 @@ class BaseMap implements Map
     }
 
     /**
-     * @param iterable<V>                                      $values
-     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
+     * @param iterable<V>                                     $values
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V>|null $comparator
      *
      * @return bool
      */
@@ -124,8 +124,8 @@ class BaseMap implements Map
     }
 
     /**
-     * @param K                                                $key
-     * @param \Smpl\Functional\Contracts\Comparator<K, K>|null $comparator
+     * @param K                                               $key
+     * @param \Smpl\Utilities\Contracts\Comparator<K, K>|null $comparator
      *
      * @return bool
      */
@@ -254,9 +254,9 @@ class BaseMap implements Map
     }
 
     /**
-     * @param K                                                                           $key
-     * @param V                                                                           $value
-     * @param \Smpl\Functional\Contracts\Predicate<\Smpl\Collections\Contracts\Map<K, V>> $predicate
+     * @param K                                                                          $key
+     * @param V                                                                          $value
+     * @param \Smpl\Utilities\Contracts\Predicate<\Smpl\Collections\Contracts\Map<K, V>> $predicate
      *
      * @return bool
      */

@@ -7,8 +7,8 @@ namespace Smpl\Collections;
 use Override;
 use Smpl\Collections\Exceptions\UnsupportedOperationException;
 use Smpl\Collections\Support\BaseSequence;
-use Smpl\Functional\Contracts\Comparator;
-use Smpl\Functional\Contracts\Predicate;
+use Smpl\Utilities\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Predicate;
 
 /**
  * Immutable Sequence
@@ -89,8 +89,8 @@ final class ImmutableSequence extends BaseSequence
     }
 
     /**
-     * @param P                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param P                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      *
@@ -103,8 +103,8 @@ final class ImmutableSequence extends BaseSequence
     }
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      *
@@ -117,7 +117,7 @@ final class ImmutableSequence extends BaseSequence
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Predicate<P> $predicate
+     * @param \Smpl\Utilities\Contracts\Predicate<P> $predicate
      *
      * @return bool
      *
@@ -130,8 +130,8 @@ final class ImmutableSequence extends BaseSequence
     }
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      *
@@ -144,7 +144,7 @@ final class ImmutableSequence extends BaseSequence
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Predicate<P> $predicate
+     * @param \Smpl\Utilities\Contracts\Predicate<P> $predicate
      *
      * @return bool
      *
@@ -212,7 +212,7 @@ final class ImmutableSequence extends BaseSequence
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Comparator<P, P> $comparator
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P> $comparator
      *
      * @return never
      *

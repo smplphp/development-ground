@@ -2,8 +2,8 @@
 
 namespace Smpl\Collections\Contracts;
 
-use Smpl\Functional\Contracts\Comparator;
-use Smpl\Functional\Contracts\Predicate;
+use Smpl\Utilities\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Predicate;
 
 /**
  * Map Contract
@@ -50,8 +50,8 @@ interface Map extends Enumerable
      *
      * The behaviour without a comparator is an implementation-specific detail.
      *
-     * @param V                                                $value
-     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
+     * @param V                                               $value
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V>|null $comparator
      *
      * @return bool
      */
@@ -74,8 +74,8 @@ interface Map extends Enumerable
      *
      * The behaviour without a comparator is an implementation-specific detail.
      *
-     * @param iterable<V>                                      $values
-     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
+     * @param iterable<V>                                     $values
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V>|null $comparator
      *
      * @return bool
      */
@@ -125,8 +125,8 @@ interface Map extends Enumerable
      *
      * The behaviour without a comparator is an implementation-specific detail.
      *
-     * @param K                                                $key
-     * @param \Smpl\Functional\Contracts\Comparator<K, K>|null $comparator
+     * @param K                                               $key
+     * @param \Smpl\Utilities\Contracts\Comparator<K, K>|null $comparator
      *
      * @return bool
      */
@@ -247,9 +247,9 @@ interface Map extends Enumerable
      * a particular pair can be added, in which case they should throw an
      * appropriate exception.
      *
-     * @param K                                                                           $key
-     * @param V                                                                           $value
-     * @param \Smpl\Functional\Contracts\Predicate<\Smpl\Collections\Contracts\Map<K, V>> $predicate
+     * @param K                                                                          $key
+     * @param V                                                                          $value
+     * @param \Smpl\Utilities\Contracts\Predicate<\Smpl\Collections\Contracts\Map<K, V>> $predicate
      *
      * Except for usage of the predicate, implementations should be consistent
      * with {@see self::put()}.

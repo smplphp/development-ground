@@ -7,8 +7,8 @@ use ArrayIterator;
 use Override;
 use Smpl\Collections\Concerns\IsCountable;
 use Smpl\Collections\Contracts\Collection;
-use Smpl\Functional\Contracts\Comparator;
-use Smpl\Functional\Contracts\Predicate;
+use Smpl\Utilities\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Predicate;
 use Traversable;
 
 /**
@@ -100,12 +100,12 @@ abstract class BaseCollection implements Collection
     /**
      * Find the index of an element
      *
-     * Takes an argument of type P and an optional {@see \Smpl\Functional\Contracts\Comparator},
+     * Takes an argument of type P and an optional {@see \Smpl\Utilities\Contracts\Comparator},
      * which is then used to locate the first index of the element within this collection. If no
      * index is found, false is returned.
      *
-     * @param P                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param P                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return false|int
      *
@@ -125,10 +125,10 @@ abstract class BaseCollection implements Collection
      * Find the index of an element using a comparator
      *
      * An expansion on {@see self::findIndexOf()} to specifically deal with cases where a
-     * {@see \Smpl\Functional\Contracts\Comparator} is provided.
+     * {@see \Smpl\Utilities\Contracts\Comparator} is provided.
      *
-     * @param P                                           $element
-     * @param \Smpl\Functional\Contracts\Comparator<P, P> $comparator
+     * @param P                                          $element
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P> $comparator
      *
      * @return false|int
      *
@@ -147,8 +147,8 @@ abstract class BaseCollection implements Collection
     }
 
     /**
-     * @param P                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param P                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      *
@@ -166,8 +166,8 @@ abstract class BaseCollection implements Collection
     }
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      *
@@ -242,8 +242,8 @@ abstract class BaseCollection implements Collection
     }
 
     /**
-     * @param P                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param P                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -266,8 +266,8 @@ abstract class BaseCollection implements Collection
     }
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -286,7 +286,7 @@ abstract class BaseCollection implements Collection
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Predicate<P> $predicate
+     * @param \Smpl\Utilities\Contracts\Predicate<P> $predicate
      *
      * @return bool
      */
@@ -311,9 +311,9 @@ abstract class BaseCollection implements Collection
      * Takes two arguments of type P and compares them for equality. If a comparator is provided,
      * that will be used to compare the elements.
      *
-     * @param P                                                $element1
-     * @param P                                                $element2
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param P                                               $element1
+     * @param P                                               $element2
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      *
@@ -326,8 +326,8 @@ abstract class BaseCollection implements Collection
     }
 
     /**
-     * @param iterable<P>                                      $elements
-     * @param \Smpl\Functional\Contracts\Comparator<P, P>|null $comparator
+     * @param iterable<P>                                     $elements
+     * @param \Smpl\Utilities\Contracts\Comparator<P, P>|null $comparator
      *
      * @return bool
      */
@@ -349,7 +349,7 @@ abstract class BaseCollection implements Collection
     }
 
     /**
-     * @param \Smpl\Functional\Contracts\Predicate<P> $predicate
+     * @param \Smpl\Utilities\Contracts\Predicate<P> $predicate
      *
      * @return bool
      */

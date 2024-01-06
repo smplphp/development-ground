@@ -2,7 +2,7 @@
 
 namespace Smpl\Collections\Contracts;
 
-use Smpl\Functional\Contracts\Comparator;
+use Smpl\Utilities\Contracts\Comparator;
 
 /**
  * Sequence Contract
@@ -74,8 +74,8 @@ interface Sequence extends Collection
      *
      * The behaviour without a comparator is an implementation-specific detail.
      *
-     * @param V                                                $element
-     * @param \Smpl\Functional\Contracts\Comparator<V, V>|null $comparator
+     * @param V                                               $element
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V>|null $comparator
      *
      * @return int|false
      */
@@ -171,7 +171,7 @@ interface Sequence extends Collection
      * within this collection. While it is possible that the actual order of the elements
      * remains unchanged, it should be assumed that element indexes will have changed.
      *
-     * @param \Smpl\Functional\Contracts\Comparator<V, V> $comparator
+     * @param \Smpl\Utilities\Contracts\Comparator<V, V> $comparator
      *
      * @return static
      */
